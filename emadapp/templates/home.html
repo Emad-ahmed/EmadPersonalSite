@@ -1,5 +1,465 @@
 {% extends 'base.html' %} <br />
-
+{% load static %} <br />
 {% block title %}{% endblock title %} <br />
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
 
-{% block content %} {% endblock content %}
+{% block content %} <br />
+
+<div class="container myhome">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <h5 class="wel">WELCOME</h5>
+      <div class="myb"></div>
+      <h1 class="text-white ms-0 mb-3 mt-3">I Am Web Developer</h1>
+      <p class="text-white text-muted">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis enim
+        mollitia deleniti nam impedit aliquid.
+      </p>
+      <div class="allicon">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
+        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
+        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
+        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
+      </div>
+    </div>
+
+    <div class="col-lg-6 myimg">
+      <img src="{% static 'img/pro.png' %} " alt="" class="imgpro" />
+    </div>
+  </div>
+</div>
+
+{% comment %} Services {% endcomment %} <br />
+
+<h1 class="text-center mt-5 text-white">My Services</h1>
+
+<div class="services-container">
+  <div id="services-top-row">
+    <div class="services-glass-card">
+      <div class="camera-container">
+        <div class="circle">
+          <div class="camera-eye">
+            <div class="inner-eye">
+              <div class="blinking"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card-info">
+        <i class="fas fa-code"></i>
+
+        <h2>C/C++</h2>
+
+        <p>
+          Physical access controls help protect important or sensitive assets
+          within any organization. Stop the hassle of passing out physical keys
+          and consider a managed electronic door system.
+        </p>
+      </div>
+
+      <div class="service-card-video">
+        <div class="tool-tip-container">
+          <p class="d-none d-lg-block">CLICK PREVIEW BELOW TO VIEW PAGE.</p>
+
+          <p class="d-block d-lg-none">TAP PREVIEW BELOW TO VIEW PAGE.</p>
+        </div>
+
+        <figure class="effect-ming">
+          <video
+            preload="auto"
+            playsinline="true"
+            loop="true"
+            muted="true"
+            autoplay="true"
+            class="img-fluid"
+            poster="{% static 'img/webde.png' %}"
+          >
+            <source src="{% static 'video/c.mp4' %}" type="video/webm" />
+            <source src="{% static 'video/c.mp4' %}" type="video/mp4" />
+          </video>
+          <figcaption>
+            <p>VIEW PAGE</p>
+            <a href="/security/access-control" rel="noopener">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="services-glass-card">
+      <div class="camera-container">
+        <div class="circle">
+          <div class="camera-eye">
+            <div class="inner-eye">
+              <div class="blinking"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card-info">
+        <i class="fas fa-file-code mb-5"></i>
+
+        <h2>Web Developing</h2>
+
+        <p>
+          Our expert technicians can perform routine computer and network
+          maintenance services so that your business systems are always up to
+          speed. Digital Upgrade also provides custom maintenance plans based on
+          your business's IT needs and wants.
+        </p>
+      </div>
+
+      <div class="service-card-video">
+        <div class="tool-tip-container">
+          <p class="d-none d-lg-block">CLICK PREVIEW BELOW TO VIEW PAGE.</p>
+
+          <p class="d-block d-lg-none">TAP PREVIEW BELOW TO VIEW PAGE.</p>
+        </div>
+        <figure class="effect-ming">
+          <img
+            src="https://digitalupgrade.com/images/itmaintenance.jpg"
+            alt="img09"
+            class="img-fluid"
+          />
+          <figcaption>
+            <p>VIEW PAGE</p>
+            <a href="/security/access-control" rel="noopener">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="services-glass-card">
+      <div class="camera-container">
+        <div class="circle">
+          <div class="camera-eye">
+            <div class="inner-eye">
+              <div class="blinking"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card-info">
+        <i class="fab fa-python"></i>
+
+        <h2>Python</h2>
+
+        <p>
+          Every business should have a video surveillance system in place,
+          creating safe work environments for customers and employees. Digital
+          Upgrade offers industry-leading video surveillance technology to
+          assist in protecting business owners and their business investments.
+        </p>
+      </div>
+
+      <div class="service-card-video">
+        <div class="tool-tip-container">
+          <p class="d-none d-lg-block">CLICK PREVIEW BELOW TO VIEW PAGE.</p>
+
+          <p class="d-block d-lg-none">TAP PREVIEW BELOW TO VIEW PAGE.</p>
+        </div>
+        <figure class="effect-ming">
+          <video
+            preload="auto"
+            playsinline="true"
+            loop="true"
+            muted="true"
+            autoplay="true"
+            class="img-fluid"
+            poster="images/accesscontrolposter.jpg"
+          >
+            <source src="{% static 'video/python.mp4' %}" type="video/webm" />
+            <source src="{% static 'video/python.mp4' %}" type="video/mp4" />
+          </video>
+          <figcaption>
+            <p>VIEW PAGE</p>
+            <a href="/security/access-control" rel="noopener">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div id="services-bottom-row">
+    <div class="services-glass-card">
+      <div class="gear-container">
+        <div class="arrow-placeholder"></div>
+        <div class="arrow-circle"></div>
+        <div class="gear">
+          <div class="tooth-1"></div>
+          <div class="tooth-2"></div>
+          <div class="tooth-3"></div>
+          <div class="tooth-4"></div>
+          <div class="tooth-5"></div>
+          <div class="tooth-6"></div>
+          <div class="tooth-7"></div>
+          <div class="tooth-8"></div>
+          <div class="tooth-9"></div>
+          <div class="tooth-10"></div>
+          <div class="tooth-11"></div>
+          <div class="tooth-12"></div>
+        </div>
+      </div>
+
+      <div class="service-card-info">
+        <i class="fas fa-paint-brush"></i>
+
+        <h2>WEB DESIGN</h2>
+
+        <p>
+          If you're looking for a clean, custom-tailored website for your
+          company, Digital Upgrade is unrivaled. Digital Upgrade is Evansville,
+          Indiana's leading website design and development company. Digital
+          Upgrade can also refresh outdated-looking websites!
+        </p>
+      </div>
+
+      <div class="service-card-video">
+        <div class="tool-tip-container">
+          <p class="d-none d-lg-block">CLICK PREVIEW BELOW TO VIEW PAGE.</p>
+
+          <p class="d-block d-lg-none">TAP PREVIEW BELOW TO VIEW PAGE.</p>
+        </div>
+        <figure class="effect-ming">
+          <video
+            preload="auto"
+            playsinline="true"
+            loop="true"
+            muted="true"
+            autoplay="true"
+            class="img-fluid"
+            poster="images/accesscontrolposter.jpg"
+          >
+            <source
+              src="https://digitalupgrade.com/images/webdesign.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://digitalupgrade.com/images/webdesign.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <figcaption>
+            <p>VIEW PAGE</p>
+            <a href="/security/access-control" rel="noopener">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="services-glass-card">
+      <div class="gear-container">
+        <div class="arrow-placeholder"></div>
+        <div class="arrow-circle"></div>
+        <div class="gear">
+          <div class="tooth-1"></div>
+          <div class="tooth-2"></div>
+          <div class="tooth-3"></div>
+          <div class="tooth-4"></div>
+          <div class="tooth-5"></div>
+          <div class="tooth-6"></div>
+          <div class="tooth-7"></div>
+          <div class="tooth-8"></div>
+          <div class="tooth-9"></div>
+          <div class="tooth-10"></div>
+          <div class="tooth-11"></div>
+          <div class="tooth-12"></div>
+        </div>
+      </div>
+
+      <div class="service-card-info">
+        <i class="fab fa-java"></i>
+
+        <h2>JAVA</h2>
+
+        <p>
+          Your company or business merits a professional-looking email address.
+          Digital Upgrade specializes in company email setup and configuration.
+          The professionals at Digital Upgrade will transfer your business data
+          and emails from your old company account to your new company email
+          account.
+        </p>
+      </div>
+
+      <div class="service-card-video">
+        <div class="tool-tip-container">
+          <p class="d-none d-lg-block">CLICK PREVIEW BELOW TO VIEW PAGE.</p>
+
+          <p class="d-block d-lg-none">TAP PREVIEW BELOW TO VIEW PAGE.</p>
+        </div>
+        <figure class="effect-ming">
+          <img
+            src="https://digitalupgrade.com/images/companyemail.jpg"
+            alt="img09"
+            class="img-fluid"
+          />
+          <figcaption>
+            <p>VIEW PAGE</p>
+            <a href="/security/access-control" rel="noopener">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="services-glass-card">
+      <div class="gear-container">
+        <div class="arrow-placeholder"></div>
+        <div class="arrow-circle"></div>
+        <div class="gear">
+          <div class="tooth-1"></div>
+          <div class="tooth-2"></div>
+          <div class="tooth-3"></div>
+          <div class="tooth-4"></div>
+          <div class="tooth-5"></div>
+          <div class="tooth-6"></div>
+          <div class="tooth-7"></div>
+          <div class="tooth-8"></div>
+          <div class="tooth-9"></div>
+          <div class="tooth-10"></div>
+          <div class="tooth-11"></div>
+          <div class="tooth-12"></div>
+        </div>
+      </div>
+
+      <div class="service-card-info">
+        <i class="fas fa-users"></i>
+
+        <h2>SOCIAL MEDIA</h2>
+
+        <p>
+          Digital Upgrade can set up and manage all business social media
+          accounts. The professionals at Digital Upgrade want to help
+          Evansville, IN businesses thrive digitally, letting companies focus on
+          other areas of their business.
+        </p>
+      </div>
+
+      <div class="service-card-video">
+        <div class="tool-tip-container">
+          <p class="d-none d-lg-block">CLICK PREVIEW BELOW TO VIEW PAGE.</p>
+
+          <p class="d-block d-lg-none">TAP PREVIEW BELOW TO VIEW PAGE.</p>
+        </div>
+        <figure class="effect-ming">
+          <video
+            preload="auto"
+            playsinline="true"
+            loop="true"
+            muted="true"
+            autoplay="true"
+            class="img-fluid"
+            poster="images/accesscontrolposter.jpg"
+          >
+            <source
+              src="https://digitalupgrade.com/images/socialmedia.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://digitalupgrade.com/images/socialmedia.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <figcaption>
+            <p>VIEW PAGE</p>
+            <a href="/security/access-control" rel="noopener">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %} About {% endcomment %} <br />
+
+<h1 class="text-center text-white mt-5 mb-5">About Me</h1>
+
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <img src="{% static 'img/emad.png' %}" alt="" />
+    </div>
+    <div class="col-lg-6">
+      <p class="text-white paratag">
+        I am a Front End developer who believes in making the internet a better
+        place. I currently work at Picspotr as a Web Developer/Design intern,
+        Vice President of LatinosinHigherEd, and a freelancer in The Greater New
+        Haven Area. Yes I wear many hats. It is my passion to conceptualize,
+        develop, and deploy ideas to this great environment we call the
+        internet. I am an advocate for Higher Education advancement and when I
+        set my goals I sink my teeth into them.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% comment %} Skills {% endcomment %}
+
+<h1 class="text-center text-white mt-5 mb-5">Skill</h1>
+
+<div class="skillbar clearfix" data-percent="80%">
+  <div class="skillbar-title" style="background: #d35400">
+    <span>HTML5</span>
+  </div>
+  <div class="skillbar-bar" style="background: #e67e22"></div>
+  <div class="skill-bar-percent">30%</div>
+</div>
+<!-- End Skill Bar -->
+
+<div class="skillbar clearfix" data-percent="25%">
+  <div class="skillbar-title" style="background: #2980b9">
+    <span>CSS3</span>
+  </div>
+  <div class="skillbar-bar" style="background: #3498db"></div>
+  <div class="skill-bar-percent">25%</div>
+</div>
+<!-- End Skill Bar -->
+
+<div class="skillbar clearfix" data-percent="50%">
+  <div class="skillbar-title" style="background: #2c3e50">
+    <span>jQuery</span>
+  </div>
+  <div class="skillbar-bar" style="background: #2c3e50"></div>
+  <div class="skill-bar-percent">50%</div>
+</div>
+<!-- End Skill Bar -->
+
+<div class="skillbar clearfix" data-percent="40%">
+  <div class="skillbar-title" style="background: #46465e"><span>PHP</span></div>
+  <div class="skillbar-bar" style="background: #5a68a5"></div>
+  <div class="skill-bar-percent">40%</div>
+</div>
+<!-- End Skill Bar -->
+
+<div class="skillbar clearfix" data-percent="75%">
+  <div class="skillbar-title" style="background: #333333">
+    <span>Wordpress</span>
+  </div>
+  <div class="skillbar-bar" style="background: #525252"></div>
+  <div class="skill-bar-percent">75%</div>
+</div>
+<!-- End Skill Bar -->
+
+<div class="skillbar clearfix" data-percent="100%">
+  <div class="skillbar-title" style="background: #27ae60"><span>SEO</span></div>
+  <div class="skillbar-bar" style="background: #2ecc71"></div>
+  <div class="skill-bar-percent">100%</div>
+</div>
+<!-- End Skill Bar -->
+
+<div class="skillbar clearfix" data-percent="70%">
+  <div class="skillbar-title" style="background: #124e8c">
+    <span>Photoshop</span>
+  </div>
+  <div class="skillbar-bar" style="background: #4288d0"></div>
+  <div class="skill-bar-percent">70%</div>
+</div>
+<!-- End Skill Bar -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{% static 'js/new.js' %}"></script>
+
+{% endblock content %}

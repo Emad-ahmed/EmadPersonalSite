@@ -1,83 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #1A2238;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.navbar-brand {
-    text-decoration: none;
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    color: #FC4445;
-}
-
-nav {
-    padding-top: 1rem;
-    display: flex;
-    justify-content: space-around;
-    background-color: hsl(224, 37%, 16%);
-}
-
-nav ul {
-    margin-top: 0.8rem;
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    padding-left: 1.3rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: white;
-}
-
-.imgpro {
-    width: 20rem;
-    height: 24rem;
-    object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.wel {
-    color: #FC4445;
-}
-
-.myb {
-    position: absolute;
-    width: 2px;
-    height: 2.7rem;
-    margin-left: 25rem;
-    margin-top: 1rem;
-    background-color: red;
-}
-
-.myhome {
-    margin-right: 2.5rem;
-}
-
-.allicon i {
-    border: 1px solid white;
-    border-radius: 100%;
-    padding: 0.4rem;
-    color: #fff;
-    margin-right: 0.6rem;
-}
-
 body,
 html {
     overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: "Oswald", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
 }
 
 h1,
@@ -451,8 +382,8 @@ a:hover {
 .services-container {
     width: 100%;
     height: 2000px;
-    padding: 20px 0px 30px 0px;
-    background: #1A2238;
+    padding: 70px 0px 70px 0px;
+    background: url("https://www.digitalupgrade.com/images/services_pattern.jpg") #0c4c91;
     background-repeat: repeat;
     background-size: initial;
     background-position: top center;
@@ -532,7 +463,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: #1A2238;
+    background: rgba(255, 255, 255, 0.25);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.22) 0px -12px 30px, rgba(0, 0, 0, 0.22) 0px 4px 6px, rgba(0, 0, 0, 0.27) 0px 12px 13px, rgba(0, 0, 0, 0.19) 0px -3px 5px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -710,7 +641,6 @@ figure.effect-ming img {
 }
 
 figure.effect-ming video {
-    height: 17.6rem;
     opacity: 0.9;
     transition: opacity 0.35s;
 }
@@ -762,92 +692,3 @@ figure.effect-ming:hover video {
 
 
 /* tile hover end */
-
-
-/* About */
-
-.paratag {
-    line-height: 1.8rem;
-}
-
-
-/* Skill */
-
-p {
-    color: #525252;
-    font-size: 12px;
-}
-
-.skillbar {
-    position: relative;
-    display: block;
-    margin: auto;
-    margin-bottom: 15px;
-    width: 70%;
-    background: #eee;
-    height: 35px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -webkit-transition: 0.4s linear;
-    -moz-transition: 0.4s linear;
-    -ms-transition: 0.4s linear;
-    -o-transition: 0.4s linear;
-    transition: 0.4s linear;
-    -webkit-transition-property: width, background-color;
-    -moz-transition-property: width, background-color;
-    -ms-transition-property: width, background-color;
-    -o-transition-property: width, background-color;
-    transition-property: width, background-color;
-}
-
-.skillbar-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 110px;
-    font-weight: bold;
-    font-size: 13px;
-    color: #ffffff;
-    background: #6adcfa;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-bottom-left-radius: 4px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-
-.skillbar-title span {
-    display: block;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 0 20px;
-    height: 35px;
-    line-height: 35px;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-bottomleft: 3px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-
-.skillbar-bar {
-    height: 35px;
-    width: 0px;
-    background: #6adcfa;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-}
-
-.skill-bar-percent {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    font-size: 11px;
-    height: 35px;
-    line-height: 35px;
-    color: #ffffff;
-    color: rgba(0, 0, 0, 0.4);
-}
