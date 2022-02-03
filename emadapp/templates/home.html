@@ -1,38 +1,41 @@
 {% extends 'base.html' %} <br />
 {% load static %} <br />
 {% block title %}{% endblock title %} <br />
-<link rel="stylesheet" href="{% static 'css/index.css' %}" />
 
 {% block content %} <br />
-
-<div class="container myhome">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+<div class="container myhome" id="home">
   <div class="row align-items-center">
     <div class="col-lg-6">
       <h5 class="wel">WELCOME</h5>
       <div class="myb"></div>
-      <h1 class="text-white ms-0 mb-3 mt-3">I Am Web Developer</h1>
+      <h1 class="text-white ms-0 mb-3 mt-3 me-5">I Am Web Developer</h1>
       <p class="text-white text-muted">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis enim
         mollitia deleniti nam impedit aliquid.
       </p>
       <div class="allicon">
         <a href=""><i class="fab fa-facebook"></i></a>
-        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
-        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
-        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
-        <a href=""><i class="fab fa-instagram-square fa-1x"></i></a>
+        <a href=""><i class="fab fa-linkedin fa-1x"></i></a>
+        <a href=""><i class="fab fa-whatsapp fa-1x"></i></a>
+        <a href=""><i class="fab fa-twitter fa-1x"></i></a>
+        <a href=""><i class="fab fa-codepen fa-1x"></i></a>
       </div>
     </div>
 
     <div class="col-lg-6 myimg">
-      <img src="{% static 'img/pro.png' %} " alt="" class="imgpro" />
+      <img src="{% static 'img/emad.png' %} " alt="" class="imgpro" />
     </div>
   </div>
 </div>
 
 {% comment %} Services {% endcomment %} <br />
 
-<h1 class="text-center mt-5 text-white">My Services</h1>
+<h1 class="text-center mt-5 text-white" id="service">My Services</h1>
+
+<hr class="myhr1">
 
 <div class="services-container">
   <div id="services-top-row">
@@ -372,32 +375,14 @@
   </div>
 </div>
 
-{% comment %} About {% endcomment %} <br />
 
-<h1 class="text-center text-white mt-5 mb-5">About Me</h1>
 
-<div class="container">
-  <div class="row align-items-center">
-    <div class="col-lg-6">
-      <img src="{% static 'img/emad.png' %}" alt="" />
-    </div>
-    <div class="col-lg-6">
-      <p class="text-white paratag">
-        I am a Front End developer who believes in making the internet a better
-        place. I currently work at Picspotr as a Web Developer/Design intern,
-        Vice President of LatinosinHigherEd, and a freelancer in The Greater New
-        Haven Area. Yes I wear many hats. It is my passion to conceptualize,
-        develop, and deploy ideas to this great environment we call the
-        internet. I am an advocate for Higher Education advancement and when I
-        set my goals I sink my teeth into them.
-      </p>
-    </div>
-  </div>
-</div>
+
 
 {% comment %} Skills {% endcomment %}
 
-<h1 class="text-center text-white mt-5 mb-5">Skill</h1>
+<h1 class="text-center text-white mt-5 mb-5" id="skills">Skill <hr class="myhr1" style="background:rgb(255, 233, 36);"></h1>
+
 
 <div class="skillbar clearfix" data-percent="80%">
   <div class="skillbar-title" style="background: #d35400">
@@ -458,8 +443,297 @@
 </div>
 <!-- End Skill Bar -->
 
+{% comment %} Blog Site {% endcomment %}
+
+<h1 class="text-center text-white mt-5" id="blog">Blog</h1>
+<hr class="myhr1">
+<section class="blog">
+  <a href="#" class="container">
+    
+    <div class="card">
+      <div class="content text-dark" style="font-weight:400; font-family: "Jaldi", sans-serif; font-size:calc(var(--bu) * 0.75); text-decoration: none;padding: 0;
+      margin: 0;
+      box-sizing: border-box;">
+        <h3 class="title">Lovely Title</h3>
+        <div class="tags">
+      
+          <span style="font-size: 13px">
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-calendar"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+              /></svg
+              <small> mm/dd/yyyy</small
+          ></span
+        >
+          <span style="font-size: 13px"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-eye-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+              <path
+                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
+              />
+            </svg>
+            visibility <small>4k</small></span
+          >
+          <span style="font-size: 13px">
+            
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chat-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                /></svg
+                <small> comment 45</small
+            ></span
+          >
+        </div>
+        <div class="text">
+          <p>
+            Cras sed pulvinar leo. Vivamus egestas elementum nisl, id ornare
+            libero consectetur nec. Morbi accumsan sed diam.
+          </p>
+        </div>
+        <span class="material-icons-round"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+            /></svg
+        ></span>
+      </div>
+    </div>
+    <figure>
+      <img src="https://picsum.photos/seed/298/300/200" />
+    </figure>
+  </a>
+  <a href="#" id="second" class="container">
+    <div class="card">
+      <div class="content text-dark" style="font-weight:400; font-family: "Jaldi", sans-serif; font-size:calc(var(--bu) * 0.75); text-decoration: none;padding: 0;
+      margin: 0;
+      box-sizing: border-box;">
+        <h3 class="title">Lovely Title</h3>
+        <div class="tags">
+      
+          <span style="font-size: 13px">
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-calendar"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+              /></svg
+              <small> mm/dd/yyyy</small
+          ></span
+        >
+          <span style="font-size: 13px"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-eye-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+              <path
+                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
+              />
+            </svg>
+            visibility <small>4k</small></span
+          >
+          <span style="font-size: 13px">
+            
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chat-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                /></svg
+                <small> comment 45</small
+            ></span
+          >
+        </div>
+        <div class="text">
+          <p>
+            Cras sed pulvinar leo. Vivamus egestas elementum nisl, id ornare
+            libero consectetur nec. Morbi accumsan sed diam.
+          </p>
+        </div>
+        <span class="material-icons-round"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+            /></svg
+        ></span>
+      </div>
+    </div>
+    <figure>
+      <img src="https://picsum.photos/seed/268/300/200" />
+    </figure>
+  </a>
+</section>
+
+
+{% comment %} Contact {% endcomment %}
+
+<h1 class="text-center text-white" id="contact1">Contact</h1>
+<hr class="myhr1 context">
+<section id="contact mt-5">
+  <div class="contact-box">
+    <div class="contact-links">
+      <h2>CONTACT</h2>
+      <div class="links">
+        <div class="link">
+          <a><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"></a>
+        </div>
+        <div class="link">
+          <a><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github"></a>
+        </div>
+        <div class="link">
+          <a><img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen"></a>
+        </div>
+        <div class="link">
+          <a><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrapper">
+      <form method="POST" action="/">
+        {% csrf_token %}
+        <div class="form-item">
+          <input type="text" name="sender" required>
+          <label>Name:</label>
+        </div>
+        <div class="form-item">
+          <input type="text" name="email" required>
+          <label>Email:</label>
+        </div>
+        <div class="form-item">
+          <textarea class="" name="message" required></textarea>
+          <label>Message:</label>
+        </div>
+        <button type="submit" class="submit-btn">Send</button>  
+      </form>
+    </div>
+  </div>
+</section>
+
+
+{% comment %} Footer {% endcomment %}
+
+
+<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+
+<footer>
+  <div class="row-footer">
+    <div class="site-logo">
+      <span>EmadLu</span>
+      <ul class="main-nav">
+        <li class="item1">
+          <span>E</span>
+        </li>
+        <li class="item2">
+          <span>M</span>
+        </li>
+        <li class="item3">
+          <span>A</span>
+        </li>
+        <li class="item4">
+          <span>D</span>
+        </li>
+      </ul>
+    </div>
+    <div class="site-links">
+      <span>Laguages</span>
+      <ul class="list-links">
+        <li><a>Python</a></li>
+        <li><a>Java</a></li>
+        <li><a>JavaScript</a></li>
+        <li><a>HTML & CSS / SCSS</a></li>
+      </ul>
+    </div>
+    <div class="adr-email">
+      <span>Address</span>
+      <ul class="">
+        <li class="location"><a><i class="fas fa-map-pin"></i>Sylhet, Golapgonj, Dhakadakshin</a></li>
+        <li class="email"><a href="mailto:amadahmed1234678@gmail.com?subject=subject text">amadahmed1234678@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="subscribe-form">
+      <input type="email" placeholder="Your E-Mail Address">
+      <button type="submit">Subscribe</button>
+      <p>I respect your privacy. Unsubscribe at any time.</p>
+    </div>
+  </div>
+
+  <hr class = "mainhr">
+
+  <div class="row-footer">
+    <div class="follow-icons">
+      <li><span>Follow me here</span></li>
+      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-stack-overflow"></i></a></li>
+      <li><a href="#"><i class="fab fa-codepen"></i></a></li>
+    </div>
+  </div>
+
+
+  <div class="row-footer">
+    <div class="right-dis">Made with <i style="color: red; font-size: 12px;" class="fas fa-heart"></i> by <strong>Emad Ahmed</strong></div>
+    <div class="left-dis">Copyright <strong>CodePy</strong> © 2022. All the rights are reserved.</div>
+  </div>
+
+</footer>
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="{% static 'js/new.js' %}"></script>
-
+<script src="{% static 'js/nav.js' %}"></script>
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock content %}

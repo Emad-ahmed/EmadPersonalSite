@@ -8,8 +8,25 @@ body {
     background-color: #1A2238;
 }
 
+.menuimg {
+    display: none;
+    position: absolute;
+    width: 3rem;
+    right: 10px;
+    height: 3rem;
+    object-fit: cover;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+.myhr1 {
+    background-color: rgb(255, 233, 36);
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    border-radius: 40%;
 }
 
 .navbar-brand {
@@ -64,7 +81,7 @@ nav ul li a {
 }
 
 .myhome {
-    margin-right: 2.5rem;
+    margin-right: 1.1rem;
 }
 
 .allicon i {
@@ -773,11 +790,6 @@ figure.effect-ming:hover video {
 
 /* Skill */
 
-p {
-    color: #525252;
-    font-size: 12px;
-}
-
 .skillbar {
     position: relative;
     display: block;
@@ -850,4 +862,32 @@ p {
     line-height: 35px;
     color: #ffffff;
     color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 750px) {
+    nav ul {
+        top: 4rem;
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        left: -100%;
+        z-index: 100;
+        background-color: hsl(224, 37%, 16%);
+        transition: 2s;
+    }
+    nav ul li {
+        line-height: 4rem;
+        padding-left: 0px;
+    }
+    .menuimg {
+        display: block;
+    }
+    .navbar-brand {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav ul {}
 }

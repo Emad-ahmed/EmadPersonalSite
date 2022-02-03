@@ -21,14 +21,19 @@
   <body>
     <nav>
       <a href="#" class="navbar-brand">Emadsite</a>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="navul" id="sidebar">
+        <li><a href="#home" onclick="myhome()">Home</a></li>
+        <li><a href="#service" onclick="myservice()">Services</a></li>
+        <li><a href="#skills" onclick="myskills()">Skills</a></li>
+        <li><a href="#blog" onclick="myblog()">Blog</a></li>
+        <li><a href="#contact1" onclick="mycontact()">Contact</a></li>
       </ul>
+      <img
+        src="{% static 'img/menu.png' %}"
+        alt=""
+        class="menuimg"
+        onclick="myfunction()"
+      />
     </nav>
     {% block content %} {% endblock content %}
 

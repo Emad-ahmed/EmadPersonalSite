@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Antic+Slab&family=Asap+Condensed&family=Bubbler+One&family=Cagliostro&family=Cambo&family=Capriola&family=Chathura&family=Copse&family=Courier+Prime&family=Crimson+Pro&family=Cutive&family=Cutive+Mono&family=Dongle&family=Dosis&family=DotGothic16&family=Gowun+Batang&family=IM+Fell+English&family=Istok+Web&family=Jaldi&family=Josefin+Slab&family=Kite+One&family=Kiwi+Maru&family=Kodchasan&family=Laila&family=M+PLUS+Rounded+1c&family=Maitree&family=Mandali&family=Manjari&family=Marmelad&family=NTR&family=New+Tegomin&family=Nunito&family=Port+Lligat+Slab&family=Qahiri&family=Quando&family=Quicksand&family=Sanchez&family=Sawarabi+Mincho&family=Solway&family=Stylish&family=Text+Me+One&family=Varela+Round&family=Yomogi&family=Yuji+Syuku&display=swap");
+:root {
+    /* set rems */
+    font-size: 16px;
+    /* base unit */
+    --bu: calc(1rem + max(1vh, 1vw));
+    /* colors */
+    --primary: #1A2238;
+    --primary-light: hsla(160, 26%, 42%, 100%);
+    --primary-lighter: hsla(160, 26%, 62%, 100%);
+    --dark: hsla(15, 11%, 21%, 100%);
+    --dark-light: hsla(15, 11%, 31%, 100%);
+    --dark-lighter: hsla(15, 11%, 41%, 100%);
+    --light: hsla(49, 24%, 90%, 100%);
+    --light-dark: hsla(49, 24%, 80%, 100%);
+    --light-darker: hsla(49, 24%, 75%, 100%);
+    --accent: hsla(15, 48%, 37%, 100%);
+    --accent-light: hsla(15, 48%, 57%, 100%);
+    --accent-lighter: hsla(15, 48%, 67%, 100%);
+    /* default-font-size */
+    --default-font-size: calc(var(--bu) * 0.75);
+    /* set background color */
+    background: var(--light);
+}
+
+
+/* create generic section */
+
+section {
+    padding: calc(var(--bu) * 2);
+    margin: auto;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--bu);
+    height: 400px;
+    width: 100%;
+    background: var(--primary);
+}
+
+
+/* simulate responsivity */
+
+#second {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    #second {
+        display: block;
+    }
+}
+
+
+/* style card */
+
+.container {
+    position: relative;
+    height: 100%;
+    flex-basis: 75%;
+    border-radius: var(--bu);
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-basis: 100%;
+    }
+}
+
+.container figure {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    inset: 0 auto;
+    height: 75%;
+    width: 45%;
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.5);
+    overflow: hidden;
+}
+
+.container figure img {
+    min-height: 100%;
+    transform: rotate(0deg);
+    scale: 1;
+    transition: scale 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.card {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 85%;
+    border-radius: var(--bu);
+    background: linear-gradient(var(--light), var(--light-dark));
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    inset: 0 0 0 auto;
+    width: 64.5%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    padding: calc(var(--bu) * 0.25) calc(var(--bu) * 0.5);
+    margin: auto;
+    inset: auto 0 50%;
+    font-family: "Capriola", sans-serif;
+    text-align: center;
+    transition: bottom 500ms ease-in-out;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 5%;
+    width: 90%;
+    height: 5px;
+    border-radius: 2.5px;
+    background: var(--accent);
+    transition: width 500ms 300ms ease-in-out;
+}
+
+.tags {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--bu) * 0.25);
+    padding: calc(var(--bu) * 0.25) calc(var(--bu) * 0.5);
+    margin: auto;
+    inset: 50% 0 auto;
+    opacity: 100%;
+    transition: opacity 500ms 800ms;
+}
+
+.tags p {
+    font-size: calc(var(--default-font-size) * 0.75);
+}
+
+.tags span {
+    width: 100%;
+}
+
+.text {
+    position: absolute;
+    top: 100%;
+    padding: 0 calc(var(--bu) * 0.5);
+    transition: top 500ms ease-in;
+}
+
+.text p {
+    font-size: calc(var(--default-font-size) * 0.9);
+}
+
+.content>span {
+    font-size: calc(var(--bu) * 1.75);
+    opacity: 100%;
+    transform: translateY(0px);
+    transition: transform 500ms 500ms ease-out, opacity 300ms 500ms;
+}
+
+a:hover figure {
+    box-shadow: 5px 5px 30px hsla(0, 0%, 0%, 0.5);
+}
+
+a:hover figure img {
+    transform: rotate(-1.25deg);
+    scale: 1.1;
+    transition: scale 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+a:hover .card {
+    transform: translateX(2.5px) translateY(2.5px);
+    background: linear-gradient(var(--light), var(--light-darker));
+}
+
+a:hover .title {
+    bottom: 75%;
+    transition: bottom 300ms 495ms ease-out;
+}
+
+a:hover .title::before {
+    width: 0%;
+    transition: width 300ms 300ms ease-in;
+}
+
+a:hover .tags {
+    opacity: 0%;
+    transition: opacity 300ms ease-in;
+}
+
+a:hover .text {
+    top: 25%;
+    transition: top 500ms 300ms ease-out;
+}
+
+a:hover .content>span {
+    transform: translateY(25%);
+    opacity: 0%;
+    transition: transform 300ms ease-in, opacity 200ms;
+}
