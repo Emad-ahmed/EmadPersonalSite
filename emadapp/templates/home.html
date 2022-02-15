@@ -446,15 +446,16 @@
 {% comment %} Blog Site {% endcomment %}
 
 <h1 class="text-center text-white mt-5" id="blog">Blog</h1>
-<hr class="myhr1">
+<hr class="myhr1 mb-5">
 <section class="blog">
+  {% for myb in blog %}
   <a href="#" class="container">
     
     <div class="card">
       <div class="content text-dark" style="font-weight:400; font-family: "Jaldi", sans-serif; font-size:calc(var(--bu) * 0.75); text-decoration: none;padding: 0;
       margin: 0;
       box-sizing: border-box;">
-        <h3 class="title">Lovely Title</h3>
+        <h3 class="title">{{myb.title}}</h3>
         <div class="tags">
       
           <span style="font-size: 13px">
@@ -470,7 +471,7 @@
               <path
                 d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
               /></svg
-              <small> mm/dd/yyyy</small
+              <small>{{myb.post_date}}</small
           ></span
         >
           <span style="font-size: 13px"
@@ -508,8 +509,7 @@
         </div>
         <div class="text">
           <p>
-            Cras sed pulvinar leo. Vivamus egestas elementum nisl, id ornare
-            libero consectetur nec. Morbi accumsan sed diam.
+            {{myb.post_data}}
           </p>
         </div>
         <span class="material-icons-round"
@@ -528,97 +528,17 @@
       </div>
     </div>
     <figure>
-      <img src="https://picsum.photos/seed/298/300/200" />
+      <img src="{{myb.blog_image.url}}" />
     </figure>
   </a>
-  <a href="#" id="second" class="container">
-    <div class="card">
-      <div class="content text-dark" style="font-weight:400; font-family: "Jaldi", sans-serif; font-size:calc(var(--bu) * 0.75); text-decoration: none;padding: 0;
-      margin: 0;
-      box-sizing: border-box;">
-        <h3 class="title">Lovely Title</h3>
-        <div class="tags">
-      
-          <span style="font-size: 13px">
-            
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-calendar"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
-              /></svg
-              <small> mm/dd/yyyy</small
-          ></span
-        >
-          <span style="font-size: 13px"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-eye-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-              <path
-                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
-              />
-            </svg>
-            visibility <small>4k</small></span
-          >
-          <span style="font-size: 13px">
-            
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chat-left-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                /></svg
-                <small> comment 45</small
-            ></span
-          >
-        </div>
-        <div class="text">
-          <p>
-            Cras sed pulvinar leo. Vivamus egestas elementum nisl, id ornare
-            libero consectetur nec. Morbi accumsan sed diam.
-          </p>
-        </div>
-        <span class="material-icons-round"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="currentColor"
-            class="bi bi-arrow-up-circle-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
-            /></svg
-        ></span>
-      </div>
-    </div>
-    <figure>
-      <img src="https://picsum.photos/seed/268/300/200" />
-    </figure>
-  </a>
+  {% endfor %}
+  
 </section>
 
 
 {% comment %} Contact {% endcomment %}
 
-<h1 class="text-center text-white" id="contact1">Contact</h1>
+<h1 class="text-center text-white mt-4" id="contact1">Contact</h1>
 <hr class="myhr1 context">
 <section id="contact mt-5">
   <div class="contact-box">

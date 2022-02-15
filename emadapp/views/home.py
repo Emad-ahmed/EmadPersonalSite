@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.views import View
 from django.conf import settings
 from django.core.mail import send_mail
+from emadapp.models import BlogPost
 
 
 class HomeView(View):
     def get(self, request):
-        return render(request, 'home.html')
+        myblog = BlogPost.objects.all()
+        return render(request, 'home.html', {'blog': myblog})
 
     def post(self, request):
         sender = request.POST.get("sender")
